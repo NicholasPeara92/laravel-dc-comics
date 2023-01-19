@@ -31,5 +31,6 @@
 
       </tbody>
     </table>
+    <a href="{{ route('comics.create') }}" class="btn btn-success">Aggiungi nuovo comic</a>
   </div>
 @endsection
