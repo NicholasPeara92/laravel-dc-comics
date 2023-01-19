@@ -6,7 +6,6 @@
     <table class="table">
       <thead>
         <tr>
-          <th scope="col">#</th>
           <th scope="col">Titolo</th>
           <th scope="col">Serie</th>
           <th scope="col">Data pubblicazione</th>
@@ -20,13 +19,12 @@
 
         @foreach ($comics as $comic)
           <tr>
-            <td>{{ $comic->id }}</td>
             <td>{{ $comic->title }}</td>
             <td>{{ $comic->series }}</td>
             <td>{{ $comic->sale_date }}</td>
             <td>{{ $comic->type }}</td>
             <td>{{ $comic->price }}</td>
-            <td>...</td>
+            <td><a href="{{ route('comics.show', $comic->id) }}" class="btn btn-primary">Vedi</a></td>
 
           </tr>
         @endforeach
